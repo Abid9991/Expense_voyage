@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeFitness - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <!-- Font Awesome CDN (Fixes Icon Issue) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: rgb(0, 0, 0); }
+        /*Narbar Section*/
+        .navbar {
+            background: transparent !important;
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+        .navbar .navbar-brand {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: white !important;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            margin: 0 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f36100 !important;
+        }
+        .btn-primary {
+            background-color: #f36100;
+            border: none;
+            font-size: 14px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .featured-classes {
+    padding: 50px 0;
+}
+
+        /*Footer Section*/
+
+
+.footer {
+            background-color: #111;
+            padding: 50px 0;
+            font-size: 14px;
+        }
+
+        .footer h5 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+
+        .footer .social-icons {
+            margin-top: 15px;
+        }
+
+        .footer .social-icons a {
+            color: #f36100;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer .social-icons a:hover {
+            color: #fff;
+        }
+
+        .footer a {
+            color: #f36100;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer .contact-info p {
+            margin-bottom: 5px;
+        }
+
+        .footer .copyright {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #777;
+        }
+
+
+
+
+
+
+
+    .fixed-image {
+        width: 300px;  
+        height: 150px; 
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .about-section{
+        color: white;
+    }
+
+    .col-md-6{
+        position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+.col-md-6:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+
+    
+}
+
+
+
+
+
+        /* Contact Us Button */
+        .c-btn {
+            background-color: white;
+            color: black;
+            border: 2px solid white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .c-btn:hover {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* Our Program Button */
+        .p-btn {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .p-btn:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid white;
+        }
+
+
+
+        /*Program Section*/
+
+
+
+        .program-section {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            padding: 50px;
+            background-color: black;
+        }
+
+.tilted-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            background-color: #f36100;
+            transform: skewX(-15deg);
+            transform-origin: top left;
+        }
+
+.content {
+            position: relative;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            z-index: 2;
+        }
+.left-content {
+            width: 50%;
+            padding: 50px;
+            color: black;
+            position: relative;
+            z-index: 3;
+        }
+
+.program-text {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+.title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+.description {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+
+.right-content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+.card-group {
+            display: flex;
+            gap: 20px;
+        }
+
+.card {
+            width: 350px;
+            height: 500px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+.card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+.card-img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+            color: white;
+            text-align: left;
+            margin-top: 380px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+                .ccc-btn {
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .ccc-btn:hover {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+        }
+
+
+        .fas{
+            color: #f36100;
+        }
+
+
+                /* Testimonials Section */
+                .testimonials-section {
+            background-color:#f36100;
+            text-align: left; 
+            padding: 50px 20px;
+            margin: auto;
+        }
+
+        .testimonials-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        .highlight-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Testimonial Card */
+        .testimonial-card {
+            background-color: #141414;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 250px;
+            height: 100%;
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 2rem;
+            color: #f36100;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .stars {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            flex-grow: 1;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .profile-name {
+            font-weight: bold;
+            color: white;
+        }
+        .tttext{
+            color: white;
+        }
+
+
+
+        .carousel-indicators {
+            position: relative;
+            margin-top: 15px;
+            
+        }
+
+        .carousel-indicators button {
+            background-color: #444; 
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .carousel-indicators .active {
+            background-color: #000000;
+        }
+        .carousel-inner {
+    display: flex;
+    align-items: center;
+    min-height: 350px; 
+}
+
+
+        /*Fitness banner Section*/
+
+
+
+
+.fitness-banner {
+            position: relative;
+            width: 100%;
+            height: 40vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .fitness-banner img {
+            width: 100%;  
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .fitness-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); 
+        }
+
+        .fitness-banner-content {
+            position: absolute;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .fitness-banner-content h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #f36100;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .fitness-banner-content h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #f36100;
+        }
+
+        .fitness-banner-content p {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+
+                /*Packages Section*/
+
+            
+        .plan-card {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .plan-card h4 {
+            color: #f36100;
+        }
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .checkmark {
+            color: #f36100;
+        }
+        .btn-submit {
+            background-color: #f36100;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            text-transform: uppercase;
+            width: 100%;
+            font-weight: bold;
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #d45000;
+        }
+        .full-width-section {
+            background-color: #f36100;
+            width: 100%;
+            padding: 50px 0;
+        }
+
+        .list-unstyled{
+            color: white;
+        }
+        .price{
+            color: white;
+        }
+
+        /* Stats sections */
+
+    
+        .stats-section {
+            background-color: #222;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .stat-item {
+            position: relative;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            color: #f36100; 
+        }
+        .stat-text {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        .icon-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            font-size: 5rem;
+        }
+ 
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">PRIME FITNESS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="primefitness.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services & Equipments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enquiryform.html">Enquiry Form</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="memberform.html">Become a Member</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-section" style="background-image: url('imagee.jpg');">
+                    <div class="overlay"></div>
+                    <div class="hero-content">
+                        <h1>Lift, Push, Conquer – Your Strength Journey Begins Here!</h1>
+                        <p>Unleash your power with expert training and premium equipment.</p>
+                        <a href="services.html">
+                            <button class="btn c-btn">SERVICES</button>
+                        </a>
+                    
+                        <a href="memberform.html">
+                        <button class="btn p-btn">REGISTER</button>
+                        </a>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-section" style="background-image: url('cycleee.jpg');">
+                    <div class="overlay"></div>
+                    <div class="hero-content">
+                        <h1>Pedal to Power – Ride Towards a Healthier You!</h1>
+                        <a href="services.html">
+                        <button class="btn c-btn">SERVICES</button>
+                    </a>
+                
+                    <a href="memberform.html">
+                    <button class="btn p-btn">REGISTER</button>
+                    </a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-section" style="background-image: url('swimmingg.jpg');">
+                    <div class="overlay"></div>
+                    <div class="hero-content">
+                        <h1>Make Waves – Dive Into Ultimate Fitness!</h1>
+                        <p>Boost your stamina and strength with our state-of-the-art swimming facilities.</p>
+                        <a href="services.html">
+                        <button class="btn c-btn">SERVICES</button>
+                    </a>
+                
+                    <a href="memberform.html">
+                    <button class="btn p-btn">REGISTER</button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="why-choose-us py-5 text-center text-white" style="background-color: black;">
+        <div class="container">
+ 
+            <h2 class="fw-bold" style="color: #f36100;">PUSH YOUR LIMITS FORWARD</h2>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="icon mb-3">
+                            <i class="fas fa-dumbbell fa-3x text"></i>
+                        </div>
+                        <h5 class="fw-bold">Modern equipment</h5>
+                        <p>Train with cutting-edge fitness machines and tools designed for efficiency and results. Our gym is equipped with the latest technology to support all workout styles</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="icon mb-3">
+                            <i class="fas fa-apple-alt fa-3x text"></i>
+                        </div>
+                        <h5 class="fw-bold">Healthy nutrition plan</h5>
+                        <p>Get expert-crafted meal plans tailored to fuel your fitness journey. We provide balanced nutrition guidance to optimize performance and recovery.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="icon mb-3">
+                            <i class="fas fa-dumbbell fa-3x text"></i>
+                        </div>
+                        <h5 class="fw-bold">Professional training plan</h5>
+                        <p>Achieve your goals with structured, science-backed workout programs. Our certified trainers ensure effective and safe progress for all fitness levels.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="icon mb-3">
+                            <i class="fas fa-heartbeat fa-3x text"></i>
+                        </div>
+                        <h5 class="fw-bold">Unique to your needs</h5>
+                        <p>Experience personalized fitness solutions tailored to your body, goals, and lifestyle. We design programs that fit you, ensuring maximum results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <br>
+    <br>
+
+    <section class="program-section">
+        <!-- Tilted Green Background -->
+        <div class="tilted-bg"></div>
+
+        <div class="container-fluid content">
+            <!-- Left Content -->
+            <div class="left-content">
+                <p class="program-text">OUR PROGRAM</p>
+                <h1 class="title">GIVE SHAPE OF <br> YOUR BODY.</h1>
+                <p class="description">
+                    <b>Creating custom workout plans tailored to your unique needs.
+                    Whether you're looking to build muscle, lose weight, or simply 
+                    lead a healthier lifestyle.</b>
+                </p>
+                <a href="services.html">
+                <button class="btn ccc-btn">ALL SERVICES</button>
+                </a>
+            </div>
+            
+            <!-- Images Content -->
+            <div class="right-content">
+                <div class="card-group">
+                    <div class="card">
+                        <img src="bodybuild.jpg" class="card-img" alt="Bodybuilding">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">BODYBUILDING</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="cycleee.jpg" class="card-img" alt="Regular Workout">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">REGULAR WORKOUT</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+ <!-- Fitness Banner Section -->
+ <section class="fitness-banner">
+    <img src="gallery photos/ggint.jpeg" alt="Fitness Banner"> <!-- Stretched image -->
+    <div class="fitness-banner-overlay"></div>
+    <div class="fitness-banner-content">
+        <h3>JOIN NOW</h3>
+        <h1 class="tttext">PERSONALIZED WORKOUT PLANS <br> AND <span class="highlight">ACHIEVE</span> YOUR GOALS.</h1>
+        <p class="tttext">Highlights customization and goal achievement, which can be enticing for those looking for tailored fitness solutions.</p>
+        <a href="enquiryform.html">
+        <button class="btn p-btn">Contact Us</button>
+        </a>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+
+
+
+<div class="full-width-section" style="text-align: center;">
+    <p class="testimonials-title" style="color: white;"><b>OUR PACKAGES</b></p>
+    <h2 class="text-uppercase" style="color: white;">Special for <span style="color:black">Membership</span></h2>
+    <p style="color: white;">Creating custom workout plans tailored to your unique needs.</p>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="plan-card">
+                    <h4>BASIC MEMBERSHIP</h4>
+                    <p class="price">$120 <span style="font-size:16px;">/MONTH</span></p>
+                    <ul class="list-unstyled">
+                        <li><span class="checkmark">✔</span> Access to Group Exercise classes for improved fitness and motivation.
+                        </li>
+                        <li><span class="checkmark">✔</span> Unlimited use of cardio and strength training equipment in the Sports & Fitness section.
+                        </li>
+                        <li><span class="checkmark">✔</span> Discounted rates on Cycling sessions for endurance training.
+                        </li>
+                        <li><span class="checkmark">✔</span> Locker and shower facilities for a convenient workout experience.
+                        </li>
+                        <li><span class="checkmark">✔</span> Exclusive member discounts on selected Saloon & Spa services.
+                        </li>
+                    </ul>
+                    <a href="memberform.html" class="btn btn-submit">Register</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="plan-card">
+                    <h4>PREMIUM MEMBERSHIP</h4>
+                    <p class="price">$240 <span style="font-size:16px;">/MONTH</span></p>
+                    <ul class="list-unstyled">
+                        <li><span class="checkmark">✔</span> Full access to Group Exercise, including advanced classes like HIIT and yoga.
+                        </li>
+                        <li><span class="checkmark">✔</span> Unlimited use of Swimming pools for endurance and recovery training.
+                        </li>
+                        <li><span class="checkmark">✔</span> Free Cycling sessions with expert-led spinning classes.
+                        </li>
+                        <li><span class="checkmark">✔</span> Complimentary personal training sessions in Sports & Fitness for customized workouts.
+                        </li>
+                        <li><span class="checkmark">✔</span> Additional discounts on Saloon & Spa treatments for post-workout recovery.
+                        </li>
+                    </ul>
+                    <a href="memberform.html" class="btn btn-submit">Register</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="plan-card">
+                    <h4>VIP MEMBERSHIP</h4>
+                    <p class="price">$360 <span style="font-size:16px;">/MONTH</span></p>
+                    <ul class="list-unstyled">
+                        <li><span class="checkmark">✔</span> Priority access to all Group Exercise programs, including VIP-only sessions.
+                        </li>
+                        <li><span class="checkmark">✔</span> Unlimited access to Swimming, including private lanes and aqua fitness classes.
+                        </li>
+                        <li><span class="checkmark">✔</span> Personalized Cycling coaching and access to high-end cycling equipment.
+                        </li>
+                        <li><span class="checkmark">✔</span> One-on-one personal training in Sports & Fitness for maximum results.
+                        </li>
+                        <li><span class="checkmark">✔</span> Unlimited Saloon & Spa treatments, including massages, sauna, and wellness therapies.
+                        </li>
+                    </ul>
+                    <a href="memberform.html" class="btn btn-submit">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<section class="stats-section">
+    <div class="container">
+        <div class="row text-center">
+            <!-- Certified Trainers -->
+            <div class="col-md-3 col-6 position-relative">
+                <i class="fas fa-solid fa-user-gear icon-bg"></i>
+                <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <div class="stat-text">Certified Trainer</div>
+                </div>
+            </div>
+
+            <!-- Happy Clients -->
+            <div class="col-md-3 col-6 position-relative">
+                <i class="fas fa-smile icon-bg"></i>
+                <div class="stat-item">
+                    <span class="stat-number">1.5K+</span>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+            </div>
+
+            <!-- Years Experience -->
+            <div class="col-md-3 col-6 position-relative">
+                <i class="fas fa-stopwatch icon-bg"></i>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <div class="stat-text">Years Experience</div>
+                </div>
+            </div>
+
+            <!-- Training Programs -->
+            <div class="col-md-3 col-6 position-relative">
+                <i class="fas fa-dumbbell icon-bg"></i>
+                <div class="stat-item">
+                    <span class="stat-number">12+</span>
+                    <div class="stat-text">Training Programs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <section class="testimonials-section" style="text-align: center;" >
+        <p class="testimonials-title"><b>TESTIMONIALS</b></p>
+        <h3 class="main-title">WHAT THEY SAY <br><span class="highlight-text">ABOUT US.</span></h3>
+
+<br>
+<br>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-inner" >
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <div class="testimonial-card">
+                                <span class="quote-icon">❝</span>
+                                <br>
+                                <div class="stars">★★★★★</div>
+                                <p class="tttext">
+                                    “Their personalized approach and unwavering support have helped me achieve 
+                                    goals I never thought possible. The workouts are challenging yet enjoyable.”
+                                </p>
+                                <div class="profile">
+                                    <img src="gallery photos/pfp1.jpg" alt="David">
+                                    <div>
+                                        <div class="profile-name">FAROOQ SATTAR</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="testimonial-card">
+                                <span class="quote-icon">❝</span>
+                                <br>
+                                <div class="stars">★★★★☆</div>
+                                <p class="tttext">
+                                    “From the first day, their enthusiasm and expertise have shone through. 
+                                    My energy levels are higher, and I’ve developed a love for fitness.”
+                                </p>
+                                <div class="profile">
+                                    <img src="gallery photos/pfp4.jpg" alt="Agnez">
+                                    <div>
+                                        <div class="profile-name">JAMAL SHAIKH</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <div class="testimonial-card">
+                                <span class="quote-icon">❝</span>
+                                <br>
+                                <div class="stars">★★★★★</div>
+                                <p class="tttext">
+                                    “Absolutely love their training programs! My confidence and endurance have skyrocketed.”
+                                </p>
+                                <div class="profile">
+                                    <img src="gallery photos/pfp3.jpg" alt="Michael">
+                                    <div>
+                                        <div class="profile-name">FARAZ AHMED</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="testimonial-card">
+                                <span class="quote-icon">❝</span>
+                                <br>
+                                <div class="stars">★★★★☆</div>
+                                <p class="tttext">
+                                    “A game-changer for my health! The team is incredibly knowledgeable and supportive.”
+                                </p>
+                                <div class="profile">
+                                    <img src="gallery photos/pfp2.jpg" alt="Sarah">
+                                    <div>
+                                        <div class="profile-name" >AYESHA IMRAN</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Styled Carousel Indicators (Perfect Circular Dots) -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Prime Fitness is fitness club established in the year 1982. The fitness club has equipped with all basic fitness equipment and<br>also included the newly introduced. The Prime fitness club is the flagship brand for Prime Fitness Club Ltd, a UN based health and fitness services provider and a pioneer in the “Integrated Health Club Management Solutions’ business. Prime Fitness Club ltd focuses on staying fit is most important to meet the challenging requirements.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 contact-info">
+                    <h5>Contact Info</h5>
+                    <p><strong>Address:</strong> 123 Street, Hyderabad, Pakistan</p>
+                    <p><strong>Telephone:</strong> +92 333 333 3333</p>
+                    <p><strong>Email:</strong> primefitness@gmail.com</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="enquiryform.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="copyright">
+                <p>© 2025 Prime Fitness, All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    </head>
+    
+
+ 
+
+
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
